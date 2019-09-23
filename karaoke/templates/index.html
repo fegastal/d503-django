@@ -10,6 +10,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ context.vazio }}</h1>
+    <h1>Nomes:</h1>
+    {% if not vazio %}
+        <ul>
+        {% for i in nomes %}
+            <li>{{i}}</li>
+        {% endfor %}
+        </ul>
+        {% else%}
+            <p>Não há nomes cadastrados</p>
+        {% endif %}
 </body>
 </html>
